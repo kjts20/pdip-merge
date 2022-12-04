@@ -1,0 +1,16 @@
+{
+  "name": "@kjts20/pdip-merge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "copyto.js",
+  "bin": {
+    "ssmerge": "bin/index.js"
+  },
+  "keywords": [],
+  "author": "wkj",
+  "license": "ISC",
+  "dependencies": {
+    "compressing": "^1.6.2",
+    "pkg": "^5.8.0"
+  }
+}
