@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 const fs = require('fs');
-const {resolve} = require('path');
+const {resolve, dirname} = require('path');
 const {unzip, deleteFileOrFolder} = require('../utils');
 
 // 增量包组成
@@ -50,7 +50,14 @@ const mergePdip = async function(sourceDir, increamentFileName){
         for (const file of copyFiles) {
             const iFileName = resolve(increamentRoot, file);
             if(fs.existsSync(iFileName)){
-                fs.copyFileSync(iFileName, resolve(sourceDir, file));
+                // 目录不存在就先创建目录
+                const gFileName = resolve(sourceDir, file);
+                const gFileFolder = dirname(gFileName);
+                if(!fs.existsSync(gFileFolder)){
+                    fs.mkdirSync(gFileFolder, {recursive: true});
+                }
+                // 复制文件
+                fs.copyFileSync(iFileName, gFileName);
             }
         }
         logger.log("添加/修改结束...");
