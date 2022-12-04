@@ -1,6 +1,6 @@
 {
   "name": "@kjts20/pdip-merge",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "时时科技，增量包合并工具",
   "main": "bin/index.js",
   "bin": {
