@@ -1,11 +1,11 @@
 ## 时时科技 增量包合并工具
 ### 安装须知
 - 电脑上必须有node环境
-- 使用node命令进行全局安装： npm install @kjts20/pdip-merge
+- 使用node命令进行全局安装： npm install @kjts20/pdip-merge -g
 
 ### 使用方法
 #### 切换到源文件工作目录
-#### 执行: ssMerge [增量包路径]
+#### 执行: ssmerge [增量包路径]
 比如： ssmerge ./test.zip
 
 ### 增量包的格式
