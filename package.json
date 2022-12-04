@@ -6,6 +6,9 @@
   "bin": {
     "ssmerge": "bin/index.js"
   },
+  "scripts": {
+    "pub": "npm version patch && npm publish"
+  },
   "keywords": [],
   "author": "wkj",
   "license": "ISC",
