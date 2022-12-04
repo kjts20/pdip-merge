@@ -9,5 +9,24 @@
 比如： ssmerge ./test.zip
 
 ### 增量包的格式
+```
 |- .MANIFEST  清单文件
 |- root       项目根目录
+   |- src
+       |-test.txt      
+       |-test2.txt      
+```
+### 清单文件
+```
+{
+    "DELETE": [
+        "test.ext"
+    ],
+    "ADD":[
+        "src/test.txt"
+    ],
+    "UPDATE":[
+        "src/test2.txt"
+    ]
+}
+```
