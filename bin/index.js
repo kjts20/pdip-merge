@@ -75,7 +75,11 @@ const  init = function(pdipFile, workDir){
     if(fs.existsSync(pdipFile)){
         mergePdip(workDir, pdipFile);
     }else{
-        logger.error(`增量包文件：「${pdipFile}」不存在！！！`);
+        if(pdipFile){
+            logger.error(`增量包文件：「${pdipFile}」不存在！！！`);
+        }else{
+            logger.error(`没有指定增量包！！！`);
+        }
     }
 };
 
