@@ -1,8 +1,8 @@
 {
   "name": "@kjts20/pdip-merge",
-  "version": "1.0.0",
-  "description": "",
-  "main": "copyto.js",
+  "version": "0.0.1",
+  "description": "时时科技，增量包合并工具",
+  "main": "bin/index.js",
   "bin": {
     "ssmerge": "bin/index.js"
   },
@@ -10,7 +10,6 @@
   "author": "wkj",
   "license": "ISC",
   "dependencies": {
-    "compressing": "^1.6.2",
-    "pkg": "^5.8.0"
+    "compressing": "^1.6.2"
   }
 }
